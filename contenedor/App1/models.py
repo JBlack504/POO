@@ -83,7 +83,7 @@ class OfertaDB(models.Model):
 class ResenasDB(models.Model):
     usuario = models.ForeignKey(UsuarioDB, null=True,on_delete=models.CASCADE )
     contenido = models.TextField(verbose_name="Contenido", null=False, blank=True)
-    calificacion = models.CharField( max_length= 10 ,verbose_name="Calificación", 
+    calificacion = models.IntegerField( max_length= 10 ,verbose_name="Calificación", 
         validators=[
             MinValueValidator(0),  # Valor mínimo 0
             MaxValueValidator(10) # Valor máximo 10
@@ -95,4 +95,4 @@ class ResenasDB(models.Model):
         verbose_name_plural = "Reseñas"
         
     def __str__(self):
-           return self.id
+          return f"Reseña de {self.usuario.nombre} - Calificación: {self.calificacion}"

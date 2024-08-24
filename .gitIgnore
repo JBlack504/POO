@@ -1,0 +1,46 @@
+# Python
+*.py[cod]
+_pycache_/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+
+# Django
+*.log
+*.pot
+*.pyc
+*.mo
+*.pyo
+*.db
+*.sqlite3
+
+# Ignore the virtual environment directory
+venv/
+env/
+ENV/
+.venv/
+
+# Ignore settings local or secret keys
+.env
+.env.*
+
+# Ignore Django migrations
+*/migrations/.py
+!**/migrations/_init_.py
+
+# Ignore media and static files (if managed locally)
+media/
+staticfiles/
+
+# Ignore IDE specific files (optional)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore macOS-specific files
+.DS_Store

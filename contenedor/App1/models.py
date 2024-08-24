@@ -83,7 +83,7 @@ class OfertaDB(models.Model):
 class ResenasDB(models.Model):
     usuario = models.ForeignKey(UsuarioDB, null=True,on_delete=models.CASCADE )
     contenido = models.TextField(verbose_name="Contenido", null=False, blank=True)
-    calificacion = models.IntegerField( max_length= 10 ,verbose_name="Calificación", 
+    calificacion = models.IntegerField(verbose_name="Calificación", 
         validators=[
             MinValueValidator(0),  # Valor mínimo 0
             MaxValueValidator(10) # Valor máximo 10

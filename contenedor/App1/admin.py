@@ -25,3 +25,10 @@ admin.site.register(Habilidades, HabilidadesAdmin)
     #fields = ["empleador","titulo", "descripcion", "Habilidades", "topicos", "beneficios"]
 admin.site.register(OfertaDB)
 
+
+
+
+
+
+
+

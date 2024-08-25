@@ -1,7 +1,12 @@
 from rest_framework import serializers
-from.models import  EmpresaDB, OfertaDB,ResenasDB, Habilidades 
+from.models import  UsuarioPersonalizado,EmpresaDB, OfertaDB,ResenasDB, Habilidades 
 
-
+class UsuarioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UsuarioPersonalizado
+        fields = ['id', 'nombre', 'correo']
+        
+        
 class EmpresaSerializer(serializers.ModelSerializer):
     class Meta:
         model = EmpresaDB

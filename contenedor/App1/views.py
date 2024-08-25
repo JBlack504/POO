@@ -1,17 +1,17 @@
 from rest_framework import viewsets
 from django.shortcuts import render
 from django.http import HttpResponse
-from .serializers import EmpleadorSerializer,OfertaSerializer,HabilidadSerializer, ResenaSerializer
-from .models import EmpleadorDB, OfertaDB, Habilidades, ResenasDB
+from .serializers import EmpresaSerializer,OfertaSerializer,HabilidadSerializer, ResenaSerializer
+from .models import EmpresaDB, OfertaDB, Habilidades, ResenasDB
 
 # Create your views here.
 def IndexView(request):
     #esto es la pagina principal
     return HttpResponse(" Sekai Konnichiwa")
 
-class EmpleadorViewSet(viewsets.ModelViewSet):
-    queryset = EmpleadorDB.objects.all()
-    serializer_class = EmpleadorSerializer
+class EmpresaViewSet(viewsets.ModelViewSet):
+    queryset = EmpresaDB.objects.all()
+    serializer_class = EmpresaSerializer
     
 class OfertaViewSet(viewsets.ModelViewSet):
      queryset = OfertaDB.objects.all()

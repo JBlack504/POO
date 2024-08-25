@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from.models import  EmpleadorDB, OfertaDB,ResenasDB, Habilidades 
+from.models import  EmpresaDB, OfertaDB,ResenasDB, Habilidades 
 
 
-class EmpleadorSerializer(serializers.ModelSerializer):
+class EmpresaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = EmpleadorDB
+        model = EmpresaDB
         fields = '__all__'
 
 class OfertaSerializer(serializers.ModelSerializer):
